@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Madimi+One&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  font-family: "Lexend", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}

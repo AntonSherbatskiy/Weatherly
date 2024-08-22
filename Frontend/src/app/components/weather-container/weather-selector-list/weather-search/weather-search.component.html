@@ -1,0 +1,15 @@
+<div class="search-container">
+  <div class="search-bar">
+    <input
+      #searchInput
+      (input)="inputEnter()"
+      [maxLength]="50"
+      (keyup.enter)="searchButtonClicked()"
+      type="text" id="searchInput" placeholder="Search...">
+    <button
+      (click)="searchButtonClicked()"
+      [disabled]="!searchInput.value"
+      [ngClass]="{'submit-search-enabled': searchInput.value, 'submit-search-disabled': !searchInput.value}">Search</button>
+  </div>
+</div>
+

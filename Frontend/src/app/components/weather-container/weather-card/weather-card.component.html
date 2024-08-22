@@ -1,0 +1,48 @@
+@if (loaded && weatherList) {
+    <div class="container">
+      <div class="inner-container">
+        <div class="weather-side">
+          <div class="date-container">
+            <h2 class="date-dayname">{{selectedWeather.date.toLocaleDateString('en-us', {weekday:'long'})}}</h2>
+            <span class="date-day">{{selectedWeather.date}}</span>
+            <i class="location-icon" data-feather="map-pin"></i>
+            <span class="location">{{selectedWeather.city}}</span>
+          </div>
+          <div class="weather-container"><i class="weather-icon" data-feather="sun"></i>
+            <h1 class="weather-temp">{{selectedWeather.temp.toFixed(1)}}</h1>
+            <h3 class="weather-desc">{{selectedWeather.cloudStatus}}</h3>
+          </div>
+        </div>
+        <div class="info-side">
+          <div class="today-info-container">
+            <div class="today-info">
+              <div class="precipitation"> <span class="title">PRESSURE</span><span class="value">{{selectedWeather.pressure}}</span>
+                <div class="clear"></div>
+              </div>
+              <div class="humidity"> <span class="title">HUMIDITY</span><span class="value">{{selectedWeather.humidity + " %"}}</span>
+                <div class="clear"></div>
+              </div>
+              <div class="wind"> <span class="title">WIND</span><span class="value">{{selectedWeather.wind}} km/h</span>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+          <div class="week-container">
+            <ul class="week-list">
+              <li (click)="selectedDay = 0" [ngClass]="{'active': selectedDay == 0}"><i class="day-icon" data-feather="sun"></i><span class="day-name">{{selectWeather(0).date.toLocaleDateString('en-us', {weekday:'long'})}}</span><span class="day-temp">{{selectWeather(0).temp}} °C</span></li>
+              <li (click)="selectedDay = 1" [ngClass]="{'active': selectedDay == 1}"><i class="day-icon" data-feather="sun"></i><span class="day-name">{{selectWeather(1).date.toLocaleDateString('en-us', {weekday:'long'})}}</span><span class="day-temp">{{selectWeather(1).temp}} °C</span></li>
+              <li (click)="selectedDay = 2" [ngClass]="{'active': selectedDay == 2}"><i class="day-icon" data-feather="cloud"></i><span class="day-name">{{selectWeather(2).date.toLocaleDateString('en-us', {weekday:'long'})}}</span><span class="day-temp">{{selectWeather(2).temp}} °C</span></li>
+              <li (click)="selectedDay = 3" [ngClass]="{'active': selectedDay == 3}"><i class="day-icon" data-feather="cloud-snow"></i><span class="day-name">{{selectWeather(3).date.toLocaleDateString('en-us', {weekday:'long'})}}</span><span class="day-temp">{{selectWeather(3).temp}} °C</span></li>
+              <li (click)="selectedDay = 4" [ngClass]="{'active': selectedDay == 4}"><i class="day-icon" data-feather="cloud-rain"></i><span class="day-name">{{selectWeather(4).date.toLocaleDateString('en-us', {weekday:'long'})}}</span><span class="day-temp">{{selectWeather(4).temp}} °C</span></li>
+              <div class="clear"></div>
+            </ul>
+          </div>
+          <div class="location-container">
+            <button (click)="navigateBack()" class="location-button"> <i data-feather="map-pin"></i><span>Change location</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+} @else {
+  <app-loader/>
+}

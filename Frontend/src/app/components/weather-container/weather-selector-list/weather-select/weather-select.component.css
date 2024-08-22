@@ -1,0 +1,23 @@
+.card {
+  font-size: 22px;
+  color: white;
+  background: #17bcf5;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px 0;
+  width: 600px;
+  cursor: pointer;
+}
+
+.rotate {
+  display: inline-block;
+  transition-duration: 0.2s;
+  text-align: center;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.rotate:hover {
+  transform: rotate(2deg);
+}
