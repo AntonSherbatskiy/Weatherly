@@ -17,7 +17,7 @@ Clone the repository
 cd weather-app
 git clone https://github.com/AntonSherbatskiy/Weatherly.git
 ```
-Open docker-compose.yml and copy your api key to `Configuration__OpenWeatherMapKey`
+Open docker-compose.yml and copy your `WeatherMap` api key to `Configuration__OpenWeatherMapKey`
 
 Run docker compose
 ```bash
