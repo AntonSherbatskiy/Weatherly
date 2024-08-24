@@ -25,4 +25,4 @@ docker compose up -d
 ```
 
 Now you have 3 containers in the docker: `Backend`, `Frontend`, `Proxy` (NGINX Reverse proxy server). 
-To get to the main page, open your browser and go to http://localhost:80. The API is available at http://localhost:5000/api/v1/weather/{city}
+To get to the main page, open your browser and go to http://localhost. The API is available at http://localhost/api/v1/weather/{city}
